@@ -59,7 +59,7 @@ const App = () => {
         setGameOver(true);
       } else {
         setChance(chance - 1);
-        if (chance === 1) {
+        if (chance === 0) {
           setMessages([`Anda gagal, jawaban yang benar adalah: ${array}`]);
           setGameOver(true);
         } else {
