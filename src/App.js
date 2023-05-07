@@ -85,11 +85,13 @@ const App = () => {
       <button onClick={handleGuess} disabled={gameOver}>
         Tebak
       </button>
-      <div>{array}</div>
       <div>
         {messages.map((message, index) => (
           <p key={index}>{message}</p>
         ))}
+      </div>
+      <div>
+        created by pikeriii.
       </div>
     </div>
   );
