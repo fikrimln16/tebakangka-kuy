@@ -5,6 +5,7 @@
   align-items: center;
   height: auto;
   color: #333;
+  overflow: scroll;
 }
 
 .title{
