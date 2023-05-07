@@ -26,7 +26,6 @@ const App = () => {
   useEffect(() => {
     setOpeningMessages([
       "Selamat datang di permainan tebak angka!",
-      "Ketik 'exit' kapan saja untuk keluar dari permainan.",
       "Silakan masukkan tebakan Anda:",
     ]);
   }, []);
@@ -60,9 +59,10 @@ const App = () => {
         setSuccess([...succes, `Asik, Angka ${posisiBenar} sudah benar posisinya!`])
       }
       if (correctPositions === 6) {
+        alert(`Selamat, Anda berhasil menebak angka. Angka yang benar adalah ${array}`);
         setMessages([
           ...messages,
-          "Selamat, Anda berhasil menebak angka. Refresh, untuk memulai kembali!",
+          `Selamat, Anda berhasil menebak angka. Angka yang benar adalah ${array} Refresh, untuk memulai kembali!`,
         ]);
         setGameOver(true)
       } else {
@@ -83,7 +83,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <div>
+      <div className="title">
         {openingMessages.map((message, index) => (
           <p key={index}>{message}</p>
         ))}
